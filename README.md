@@ -116,4 +116,4 @@ Download dataset for custom training - [Dataset](https://drive.google.com/file/d
 
 ## License
 
-[GNU General Public License v3.0](https://github.com/ParitKansal/quora-question-pairs/blob/main/LICENSE)
+[GNU General Public License v3.0](https://github.com/Pankhuri9026/quora-question-pairs/blob/main/LICENSE)
