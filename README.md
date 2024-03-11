@@ -2,12 +2,13 @@
 
 The goal of this project is to predict which of the provided pairs of questions contain two questions with the same meaning.
 
-Link - [GoogleColab](https://colab.research.google.com/drive/1kTpnNduOLO3GFWlvNFV3pMnlJryMXf6X?usp=sharing)
+Link - [GoogleColab](https://colab.research.google.com/drive/1Rr1d-UtKJ1DzkeoVed5550y4CmZvWpC2?usp=drive_link)
+
 
 ## **Authors**
-
-- [@ParitKansal](https://www.github.com/ParitKansal)
 - [@Pankhuri9026](https://github.com/Pankhuri9026)
+- [@ParitKansal](https://www.github.com/ParitKansal)
+
 ## **Description**
 In this project, we aim to address a common challenge on Quora: the proliferation of similar questions. With over 100 million monthly visitors, it's common for users to ask questions that have already been posed in slightly different ways. This redundancy can lead to inefficiencies as seekers struggle to find the best answers and writers feel compelled to respond to multiple versions of the same question.
 
@@ -112,7 +113,7 @@ Download dataset for custom training - [Dataset](https://drive.google.com/file/d
     
 ### word2vec
 - Applied pretained model of word2vec of GoogleNews on question1, question2 columns of the preprocessed data.
-- Download dataset after applying preprocessing and word2vec- [Processed Dataset](https://drive.google.com/file/d/1-0FVCRRCBv2kMAibJqtGo4B7ua54g-N8/view?usp=sharing)
+- Download dataset after applying preprocessing and word2vec- [Processed Dataset](https://drive.google.com/file/d/1iwMKo8hj1kYbYsGyNNJd_TsN-Wo9u3wb/view?usp=drive_link)
 
 ## License
 
