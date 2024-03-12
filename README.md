@@ -140,7 +140,7 @@ Download dataset for custom training - [Dataset](https://drive.google.com/file/d
 ### Deployment of Model in Jupyter Notebook
 
 - Download dataset after applying preprocessing and word2vec- [Processed Dataset](https://drive.google.com/file/d/1iwMKo8hj1kYbYsGyNNJd_TsN-Wo9u3wb/view?usp=drive_link)  
-- Run the following comands in python notebook
+- Run the following commands in python notebook
   ```bash
   df = pd.read_csv("link_of_downloaded_Processes_Dataset")
   ```
