@@ -115,6 +115,55 @@ Download dataset for custom training - [Dataset](https://drive.google.com/file/d
 - Applied pretained model of word2vec of GoogleNews on question1, question2 columns of the preprocessed data.
 - Download dataset after applying preprocessing and word2vec- [Processed Dataset](https://drive.google.com/file/d/1iwMKo8hj1kYbYsGyNNJd_TsN-Wo9u3wb/view?usp=drive_link)
 
+### Modeling
+- **Type of model selection :**  
+  Perform train_test_split from sklearn.model_selection.  
+  Perform Random Forest Classifier from sklearn.ensemble and fit the dataset to train the model. On testing the model, the accuracy obtained is 0.772.  
+  Perform SVM classifier from sklearn library and fit the dataset to train the model. On testing the model, the accuracy obtained is 0.705.  
+  Since, the accuracy of the Random Forest model is better than the SVM model, therefore we move forward with the Random Forest Model.
+
+- **Hyperparameter Tuning of Random Forest Model :**
+  - **Tuning and training of model to determine best parameter :**
+      Use GridSearchCV from sklearn.model_selection to cross validate 5 times and hyper parameterize the parameters to determine the best of the parameters.
+      The best values of these parameters are obtained as:
+      - n_estimators : 115
+      - criterion : 'log_loss'
+      - max_depth : None
+      - max_features : 0.5
+      - max_samples : 1.0
+
+- **Final Modelling :**  
+  Perform Random Forest Classifier from sklearn.ensemble and fit the dataset to train the model based on the before estimated best values of the parameter and test the model to determine its accuracy. The accuracy obtained is  .  
+
+  Download trained model : [Final Model](https://drive.google.com/file/d/1ge8lHgEk9BSrkRZJEfbLSbYCTGQOwG6b/view?usp=drive_link)
+  
+### Deployment of Model in Jupyter Notebook
+
+- Download dataset after applying preprocessing and word2vec- [Processed Dataset](https://drive.google.com/file/d/1iwMKo8hj1kYbYsGyNNJd_TsN-Wo9u3wb/view?usp=drive_link)  
+- Run the following comands in python notebook
+  ```bash
+  df = pd.read_csv("link_of_downloaded_Processes_Dataset")
+  ```
+  ```bash
+  from sklearn.model_selection import train_test_split
+  X_train, X_test, y_train, y_test = train_test_split(df.drop(columns=['id', 'qid1', 'qid2', 'question1', 'question2', 'is_duplicate']), df['is_duplicate'], test_size=0.25, random_state=0)
+  ```
+- Download trained model : [Final Model](https://drive.google.com/file/d/1ge8lHgEk9BSrkRZJEfbLSbYCTGQOwG6b/view?usp=drive_link)
+- Run the following comands in python notebook after previous commands
+  ```bash
+  import pickle
+  model = pickle.load(open('link_of_downoaded_model', 'rb'))
+  ```
+  ```bash
+  y_pred = model.predict(X_test)
+  ```
+  ```bash
+  from sklearn.metrics import accuracy_score, confusion_matrix
+  print("Accuracy : ", accuracy_score(y_pred,y_test))
+  print("Confusion Matrix : ")
+  print(confusion_matrix(y_pred, y_test))
+  ```
+
 ## License
 
 [GNU General Public License v3.0](https://github.com/Pankhuri9026/quora-question-pairs/blob/main/LICENSE)
