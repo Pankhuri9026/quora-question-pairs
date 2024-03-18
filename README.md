@@ -135,7 +135,7 @@ Download dataset for custom training - [Dataset](https://drive.google.com/file/d
 - **Final Modelling :**  
   Perform Random Forest Classifier from sklearn.ensemble and fit the dataset to train the model based on the before estimated best values of the parameter and test the model to determine its accuracy. The accuracy obtained is  .  
 
-  Download trained model : [Final Model](https://drive.google.com/file/d/1ge8lHgEk9BSrkRZJEfbLSbYCTGQOwG6b/view?usp=drive_link)
+  Download trained model : [Final Model](https://drive.google.com/file/d/1SwxROPXYu-eSff3dYhlz86lT8UwRdgxf/view?usp=drive_link)
   
 ### Deployment of Model in Jupyter Notebook
 
@@ -148,7 +148,7 @@ Download dataset for custom training - [Dataset](https://drive.google.com/file/d
   from sklearn.model_selection import train_test_split
   X_train, X_test, y_train, y_test = train_test_split(df.drop(columns=['id', 'qid1', 'qid2', 'question1', 'question2', 'is_duplicate']), df['is_duplicate'], test_size=0.25, random_state=0)
   ```
-- Download trained model : [Final Model](https://drive.google.com/file/d/1ge8lHgEk9BSrkRZJEfbLSbYCTGQOwG6b/view?usp=drive_link)
+- Download trained model : [Final Model](https://drive.google.com/file/d/1SwxROPXYu-eSff3dYhlz86lT8UwRdgxf/view?usp=drive_link)
 - Run the following comands in python notebook after previous commands
   ```bash
   import pickle
